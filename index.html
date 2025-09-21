@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Guitar Shop</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="logo">🎸Guitar Shop</div>
+      <nav>
+        
+        <div class="dropdown">
+          <button class="dropbtn">Shop ☰</button>
+          <div class="dropdown-content">
+            <a href="guitars.html">Guitars</a>
+            <a href="basses.html">Basses</a>
+            <a href="amps_and_effects.html">Amps & Effects</a>
+            <a href="drums.html">Drums</a>
+            <a href="recording.html">Recording</a>
+            <a href="keyboards_and_midi.html">Keyboards & MIDI</a>
+          </div>
+        </div>
+
+      </nav>
+      <div class="actions">
+        <button onclick="window.location.href='login.html'">Sign In</button>
+        <button onclick="window.location.href='cart.html'">Cart 🛒</button>
+      </div>
+    </header>
+
+    <main>
+      <h1>Welcome to Guitar Shop</h1>
+      <div class="logo-center"><img src="images/logo.jpg" alt="Guitar Logo"></div>
+    
+
+  <section class="suggested">
+    <h2>Suggested Instruments</h2>
+    <div class="product-grid">
+
+      <div class="product-card">
+          <img src="images/recording/Shure SM7B.jpg" alt="Shure SM7B Microphone">
+          <h3>Shure SM7B Microphone</h3>
+          <p>Recording</p>
+          <p class="price">$399</p>
+          <button class="add-cart-btn" onclick="addToCart('Shure SM7B Microphone')">Add to Cart</button>
+      </div>
+      
+      <div class="product-card">
+          <img src="images/keyboard/alesis v49.jpg" alt="Alesis V49 MIDI Controller">
+          <h3>Alesis V49 MIDI Controller</h3>
+          <p>Keyboards & MIDI</p>
+          <p class="price">$109</p>
+          <button class="add-cart-btn" onclick="addToCart('Alesis V49 MIDI Controller')">Add to Cart</button>
+      </div>
+      
+      <div class="product-card">
+          <img src="images/drum/Gretsch Drum Set.jpg" alt="Gretsch Drum Set">
+          <h3>Gretsch Drum Set</h3>
+          <p>Drums</p>
+          <p class="price">$899</p>
+          <button class="add-cart-btn" onclick="addToCart('Gretsch Drum Set')">Add to Cart</button>
+      </div>
+      
+      <div class="product-card">
+          <img src="images/drum/roland TD-1K.jpg" alt="Roland TD-1K Drum Set">
+          <h3>Roland TD-1K Drum Set</h3>
+          <p>Drums</p>
+          <p class="price">$499</p>
+          <button class="add-cart-btn" onclick="addToCart('Roland TD-1K Drum Set')">Add to Cart</button>
+      </div>
+      
+      <div class="product-card">
+          <img src="images/guitar/gibson.jpg" alt="Gibson Les Paul Studio">
+          <h3>Gibson Les Paul Studio</h3>
+          <p>Guitars</p>
+          <p class="price">$1199</p>
+          <button class="add-cart-btn" onclick="addToCart('Gibson Les Paul Studio')">Add to Cart</button>
+      </div>
+      
+      <div class="product-card">
+          <img src="images/recording/focusrite scarlett.jpg" alt="Focusrite Scarlett 2i2">
+          <h3>Focusrite Scarlett 2i2</h3>
+          <p>Recording</p>
+          <p class="price">$179</p>
+          <button class="add-cart-btn" onclick="addToCart('Focusrite Scarlett 2i2')">Add to Cart</button>
+      </div>
+      
+      <div class="product-card">
+          <img src="images/amps/boss katana.jpg" alt="Boss Katana-50 Amp">
+          <h3>Boss Katana-50 Amp</h3>
+          <p>Amps & Effects</p>
+          <p class="price">$229</p>
+          <button class="add-cart-btn" onclick="addToCart('Boss Katana-50 Amp')">Add to Cart</button>
+      </div>
+      
+      <div class="product-card">
+          <img src="images/amps/line 6.jpg" alt="Line 6 Helix Multi-Effects">
+          <h3>Line 6 Helix Multi-Effects</h3>
+          <p>Amps & Effects</p>
+          <p class="price">$1499</p>
+          <button class="add-cart-btn" onclick="addToCart('Line 6 Helix Multi-Effects')">Add to Cart</button>
+      </div>
+      
+      <div class="product-card">
+          <img src="images/bass/ibanez.jpg" alt="Ibanez SR300E Bass">
+          <h3>Ibanez SR300E Bass</h3>
+          <p>Basses</p>
+          <p class="price">$349</p>
+          <button class="add-cart-btn" onclick="addToCart('Ibanez SR300E Bass')">Add to Cart</button>
+      </div>
+      
+      <div class="product-card">
+          <img src="images/guitar/fender.jpg" alt="Fender Stratocaster">
+          <h3>Fender Stratocaster</h3>
+          <p>Guitars</p>
+          <p class="price">$799</p>
+          <button class="add-cart-btn" onclick="addToCart('Fender Stratocaster')">Add to Cart</button>
+      </div>
+      
+    </div>
+  </section>
+
+  </main>
+    <script src="script.js"></script>
+  </body>
+</html>

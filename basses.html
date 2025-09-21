@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Basses - Guitar Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <header>
+
+      <div class="logo">🎸Guitar Shop</div>
+
+      <nav>
+        <div class="dropdown">
+
+          <button class="dropbtn">Shop ☰</button>
+
+          <div class="dropdown-content">
+            <a href="guitars.html">Guitars</a>
+            <a href="basses.html">Basses</a>
+            <a href="amps_and_effects.html">Amps & Effects</a>
+            <a href="drums.html">Drums</a>
+            <a href="recording.html">Recording</a>
+            <a href="keyboards_and_midi.html">Keyboards & MIDI</a>
+          </div>
+
+        </div>
+      </nav>
+
+      <div class="actions">
+        <button onclick="window.location.href='index.html'">Home</button>
+      </div>
+
+    </header>
+
+    <main>
+      <h1>Basses - Guitar Shop</h1>
+
+      <section class="suggested">
+        <div class="product-grid" id="product-grid"></div>
+      </section>
+
+    </main>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("/api/products")
+          .then(res => res.json())
+          .then(products => {
+            const container = document.getElementById("product-grid");
+            const filtered = products.filter(p => p.category === "Basses").slice(0, 5);
+            container.innerHTML = "";
+            filtered.forEach(product => {
+              const card = document.createElement("div");
+              card.className = "product-card";
+              card.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>${product.category}</p>
+                <p class="price">$${product.price}</p>
+                <button class="add-cart-btn" onclick="addToCart('${product.name}')">Add to Cart</button>
+              `;
+              container.appendChild(card);
+            });
+          });
+      });
+    </script>
+  </body>
+  </html>
